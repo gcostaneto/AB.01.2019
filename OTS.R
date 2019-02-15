@@ -16,13 +16,3 @@ OTS <- function(G,Ne,mc.cores=4){
   cat(paste("Optmization Complete:",Sys.time(),"\n",sep=" "))
   return(TS)
 }
-
-
-## proximo passo:
-
-criar dataframe contendo o Ne
-rodar OST usando dlply
-
-svdG <- svd(Ga, nu = 100, nv = 100)
-pcsG <- Ga %*% svdG$v
-rownames(pcsG) <- rownames(G)
